@@ -1,0 +1,28 @@
+CREATE DATABASE codedb;
+USE codedb;
+CREATE TABLE consultas(
+    id INT(11) NOT NULL,
+    nombre VARCHAR(60) NOT NULL,
+    email TEXT NOT NULL,
+    tema VARCHAR(50) NOT NULL,
+    descripcion TEXT NOT NULL
+);
+
+ALTER TABLE consultas
+    ADD PRIMARY KEY (id);
+
+ALTER TABLE consultas
+    MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
+
+-- LINKS TABLES
+CREATE TABLE pagos (
+    id INT(11) NOT NULL,
+    email TEXT NOT NULL,
+    stripeTokenID TEXT NOT NULL,
+    stripeSource TEXT
+);
+
+ALTER TABLE pagos ADD PRIMARY KEY (id);
+
+ALTER TABLE pagos
+    MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
