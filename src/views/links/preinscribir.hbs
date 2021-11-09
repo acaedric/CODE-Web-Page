@@ -1,0 +1,144 @@
+<section id="examples" class="text-center ">
+    <div class="row justify-content-md-center" style="margin-left: 6%;">
+
+        <div class="col-lg-4 col-md-12 col-mb-4">
+            <div class="view overlay hm-white-slight " align="center">
+                <img src="img/registro.png" class="img-fluid  " alt="">
+                <div class="mask"></div>
+                <h4 class="my-4 font-weight-bold"> Registro</h4>
+                <p class="grey-text text-center">Registra tus datos pulsando el botón "Ingreso de datos" para reclamar tu entrada virtual y mantenerte informado de todas las novedades.</p>
+                <button class="btn btn-default" data-toggle="modal" data-target="#newmodalQuickView">Ingreso de datos
+                </button>
+                <form action="/inscripcion" onsubmit="return validarticket()" method="post">
+                    <div class="modal fade" id="newmodalQuickView" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="row justify-content-md-center">
+                                        <br/>
+                                        <h2 class="h2-responsive product-name">
+                                            <strong style="color: #222222">Ingreso de datos para su TICKET VIRTUAL</strong>
+                                        </h2>
+                                        <br/>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="row">
+                                                <div class="col-lg-11 offset-lg-1">
+                                                    <div class="md-form form-group">
+                                                        <input name="nombres" type="text" class="form-control"
+                                                               id="nombretickets" placeholder="Nombres">
+                                                        <label for="nombretickets">Nombres completos (para
+                                                            certificados)</label>
+                                                    </div>
+                                                    <div class="md-form form-group">
+                                                        <input name="apellidos" type="text" class="form-control"
+                                                               id="apellidotickets" placeholder="Apellidos">
+                                                        <label for="apellidotickets">Apellidos completos (para
+                                                            certificados)</label>
+                                                    </div>
+                                                    <div class="md-form form-group">
+                                                        <input name="email" type="email" class="form-control"
+                                                               id="correotickets" placeholder="Email">
+                                                        <label for="correotickets">Correo electrónico (mail)</label>
+                                                    </div>
+                                                    <div class="md-form form-group">
+                                                        <input name="telefono" type="tel" class="form-control"
+                                                               id="telefono" placeholder="Telefono">
+                                                        <label for="telefono">Telefono</label>
+                                                    </div>
+                                                    <div class="md-form form-group">
+                                                        <input name="dni" type="text" class="form-control"
+                                                               id="dni" placeholder="DNI">
+                                                        <label for="dni">DNI</label>
+                                                    </div>
+                                                    <div class="md-form form-group">
+                                                        <input name="carrera" type="text" class="form-control"
+                                                               id="carrera" placeholder="Carrera">
+                                                        <label for="carrera">Carrera</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="row">
+                                                <div class="col-lg-11">
+                                                    <div class="md-form form-group">
+                                                        <input name="institucion" type="text" class="form-control"
+                                                               id="institucion" placeholder="Institución/independiente">
+                                                        <label for="institucion">Institución donde estudia o
+                                                            trabaja</label>
+                                                    </div>
+                                                    <div class="md-form form-group">
+                                                        <input name="numerodedeposito" type="text" class="form-control"
+                                                               id="operacionnumero" placeholder="">
+                                                        <label for="operacionnumero">Número de operación</label>
+                                                    </div>
+                                                    <div class="md-form form-group">
+                                                        <input name="codigodescuento" type="text" class="form-control"
+                                                               id="codigodescuento" placeholder="(opcional)">
+                                                        <label for="codigodescuento">Código de descuento</label>
+                                                    </div>
+
+                                                    <div class="md-form form-group">
+                                                            <textarea
+                                                                    name="atencioncode"
+                                                                    type="text"
+                                                                    class="md-textarea sm-textarea"
+                                                                    id="input8" style="height:50px;width:100%" placeholder="Cuéntenos (opcional)">
+                                                            </textarea>
+                                                        <label for="input8">Qué más le llama la atención del congreso? </label>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-left: 8%;margin-right: 8%">
+                                        <br/>
+                                        <h6 class="h4-responsive product-name">
+                                            <span style="color: #222222">Se le enviará el ticket virtual a su correo, esté pendiente del envío. La entrada a los eventos se realizará por medio de este y la confirmación de sus datos por medio del DNI</span>
+                                        </h6>
+                                        <br/>
+                                    </div>
+                                    <div class="row text-center"
+                                         style="margin-left: 3%;margin-right: 8%;padding-bottom: 1.8%;">
+
+                                        <button type="button" class="btn btn-deep-orange"
+                                                data-dismiss="modal">Close
+                                        </button>
+                                        <button class="btn btn-default" type="submit">Registrar
+
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{{!-- SCRIPTS --}}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="/js/menu.js"></script>
+<script src="/js/countdown.js"></script>
+<script src="/js/validar.js"></script>
+<script src="/js/validarticket.js"></script>
+<script src="/js/validarticket2.js"></script>

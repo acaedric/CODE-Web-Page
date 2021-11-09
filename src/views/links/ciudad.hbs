@@ -1,0 +1,111 @@
+
+<hr class="my-5">
+    <section class="container">
+        <h1 class="mb-5 font-weight-bold text-center rgba-cyan-strong">CIUDAD EMPRENDEDORA</h1>
+        <div class="row" id="ciudadE">
+            <div class="col-lg-4 col-md-12" id="col1">
+
+
+                <form  onsubmit="return validarciudad()" name="form1" action="/ciudadEmprendedora" method="post" class="pt-5 pl-0 pr-5 pb-5">
+                    <div class="md-form form-sm">
+                        <i class="fa fa-user prefix black-text"></i>
+                        <input name="nombre" type="text" id="nombre" class="form-control">
+                        <label for="input-1" style="color:grey; 
+                        font-family:  Arial;">Nombres: </label>
+                    </div>
+                    <div class="md-form form-sm">
+                        <i class="fa fa-user prefix black-text"></i>
+                        <input name="apellido" type="text" id="nombre" class="form-control">
+                        <label for="input-2" style="color: grey; 
+                        font-family:  Arial;">Apellidos: </label>
+                    </div>
+                    <div class="md-form form-sm">
+                        <i class="fa fa-envelope prefix black-text"></i>
+                        <input name="correo" type="email" id="correo" class="form-control " >
+                        <label for="input-2" style="color:grey; 
+                        font-family:  Arial;">Correo electronico: </label>
+                    </form>
+                </form>
+
+
+                    <div class="text-center">
+                        <button class="btn darken-4 " id="but1"
+                                onclick="toastr.success('Hi! I am success message.');">Enviar<i
+                                class="fas fa-paper-plane ml-2"></i></button>
+                    </div>
+            </div>
+
+            
+        </div>
+                <div class="row pl-5 pt-4 pb-4 pr-4" id="rowvideo">
+                    <div class="row" id="rowvideo1">
+                        <div class="der2 col-lg-4" id="der2">
+								
+								<p class="welcome" id="welcome">Listos para
+                                     inmigrar a nuestra novedosa ciudad virtual?</p>
+								<h3>Instrucciones:</h3>
+								<div class="row5" id="row5">
+									<div class="cc" id="cc">
+										<img src="img/ciudad/awsd.png" >
+									</div>
+									<div class="txt">
+										<p>A : Izquierda</p>
+										<p>S : Retroceder</p>
+										<p>D : Derecha</p>
+										<p>W : Avanzar</p>
+									</div>
+								</div>
+								<div class="row5">
+									<div class="cc">
+										<img src="img/ciudad/click.png" class="click" >
+									</div>
+									<div class="txt">
+										<p>Interactuar</p>
+										
+									</div>
+								</div>
+								
+						</div>
+
+                        <div class="col-lg-8 pt-5 pr-0">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe width="600" height="400" 
+                                    src="https://www.youtube.com/embed/y4tzXvVgOUk?controls=0&loop=1&playlist=0O4C9URim7I&rel=0&autoplay=1" 
+                                    frameborder="0" 
+                                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div> 
+                        </div>
+                </div>
+            
+        </div>
+
+
+
+
+
+
+    </section>
+
+{{!-- SCRIPTS --}}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+{{!-- CSS --}}
+<link rel="stylesheet" href="css/ciudad.css">
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="..\..\public\js/menu.js"></script>
+<script src="..\..\public\js/validarciudad.js"></script>
+
+
+<script>
+    new WOW().init();
+    var scroll = new SmoothScroll('a[href*="#"]', {
+                offset: 100,
+                speed: 2500
+            }
+            )
+    ;
+</script>

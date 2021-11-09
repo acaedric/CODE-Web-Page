@@ -1,0 +1,56 @@
+<div class="row  justify-content-md-center">
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        <button class="btn btn-deep-orange"  onclick="window.location.href='/registrarpagoscodewebpage2019'">Registrar pagos</button>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        <button class="btn btn-deep-orange"  onclick="window.location.href='/listaderegistradoscodewebpage2019'">Ver lista de registrados</button>
+    </div>
+</div>
+<div class="section">
+    <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+            <th class="th-sm">Id
+            </th>
+            <th class="th-sm">Tipo de pago
+            </th>
+            <th class="th-sm">Número de Depósito
+            </th>
+            <th class="th-sm">Número de tickets
+            </th>
+            <th class="th-sm">Monto total
+            </th>
+            <th class="th-sm">IdTipodeTickets
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each pagos}}
+
+        <tr>
+            <td>{{id}}</td>
+            <td>{{tipodepago}}</td>
+            <td>{{numerodedeposito}}</td>
+            <td>{{numerodetickets}}</td>
+            <td>{{montototal}}</td>
+            <td>{{idtipodetickets}}</td>
+        </tr>
+        {{/each}}
+        </tbody>
+    </table>
+
+</div>
+{{!-- SCRIPTS --}}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+<script>$(document).ready(function () {
+    $('#dtBasicExample').DataTable();
+    $('.dataTables_length').addClass('bs-select');
+});</script>

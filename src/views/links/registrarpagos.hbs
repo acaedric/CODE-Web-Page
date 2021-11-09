@@ -1,0 +1,61 @@
+<section class="container">
+    <br/>
+    <div class="row  justify-content-md-center">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <button class="btn btn-deep-orange"  onclick="window.location.href='/listadepagoscodewebpage2019'">Ver lista de pagos</button>
+        </div>
+
+    </div>
+    <br/>
+    <h1 class="mb-5 font-weight-bold text-center">Registrar pagos con datos del voucher</h1>
+    <div class="row justify-content-md-center" id="contacto">
+        <form onsubmit="return valida()" action="/registrarpagos" method="POST" class="p-5">
+            <div class="md-form form-sm">
+                <i class="fa fa-user prefix grey-text"></i>
+                <input name="numerodedeposito" type="text" id="numerodedeposito" class="form-control">
+                <label for="numerodedeposito">Numero de depósito</label>
+            </div>
+            <div class="md-form form-sm">
+                <i class="fa fa-dollar-sign prefix grey-text"></i>
+                <input name="montototal" type="number" id="montototal" class="form-control">
+                <label for="montototal">Monto total</label>
+            </div>
+            <div class="md-form form-sm">
+                <i class="fa fa-ticket-alt prefix grey-text"></i>
+                <input name="numerodetickets" type="number" id="numerodetickets"
+                       class="form-control">
+                <label for="numerodetickets">Número de tickets</label>
+            </div>
+            <div class="md-form form-sm">
+                <i class="fa fa-envelope prefix grey-text"></i>
+                <input name="emailpago" type="email" id="correoconsulta" class="form-control">
+                <label for="correoconsulta">Correo electronico</label>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-black" onclick="toastr.success('Hi! I am success message.');">Enviar<i
+                        class="fas fa-paper-plane ml-2"></i></button>
+            </div>
+        </form>
+    </div>
+</section>
+
+{{!-- SCRIPTS --}}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="/js/validar.js"></script>
+<script>
+    new WOW().init();
+    var scroll = new SmoothScroll('a[href*="#"]', {
+                offset: 100,
+                speed: 1000
+            }
+            )
+    ;
+</script>

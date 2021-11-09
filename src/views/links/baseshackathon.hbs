@@ -1,0 +1,178 @@
+<link rel="stylesheet" href="style/style.css">
+
+<style type="text/css" media="print">
+    .noprint {
+        display: none
+    }
+
+    .print {
+        display: block !important;
+    }
+</style>
+<div id="app" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+    <header class="el-header noprint">
+        <div class="icon-btns">
+            <i class="icon-list" @click="changeLeftMenu"></i>
+            <i class="icon-skip_previous" v-bind:class="{'disabled': currentPage == 1}" @click="changeCurrentPage('first')"></i>
+            <i class="icon-play_arrow prev-icon" v-bind:class="{'disabled': currentPage == 1}" @click="changeCurrentPage('prev')"></i>
+            <i class="icon-play_arrow" v-bind:class="{'disabled': currentPage == pageNum}" @click="changeCurrentPage('next')"></i>
+            <i class="icon-skip_next" v-bind:class="{'disabled': currentPage == pageNum}" @click="changeCurrentPage('last')"></i>
+            <select v-model="currentPage">
+                <option v-for="page in pageNum" v-bind:value="page">page {{ page }}</option>
+            </select>
+            <i class="icon-zoom_in" v-bind:class="{'disabled': zoomNum == 2}" @click="modifyZoom('in')"></i>
+            <select v-model="zoomNum">
+                <option value="0.5">50%</option>
+                <option value="0.6">60%</option>
+                <option value="0.7">70%</option>
+                <option value="0.8">80%</option>
+                <option value="0.9">90%</option>
+                <option value="1.0" selected>100%</option>
+                <option value="1.1">110%</option>
+                <option value="1.2">120%</option>
+                <option value="1.3">130%</option>
+                <option value="1.4">140%</option>
+                <option value="1.5">150%</option>
+                <option value="1.6">160%</option>
+                <option value="1.7">170%</option>
+                <option value="1.8">180%</option>
+                <option value="1.9">190%</option>
+                <option value="2.0">200%</option>
+            </select>
+            <i class="icon-zoom_out" v-bind:class="{'disabled': zoomNum == 0.5}" @click="modifyZoom('out')"></i>
+            <i class="icon-format_align_left" @click="textAlign = 'left'"></i>
+            <i class="icon-format_align_center" @click="textAlign = 'center'"></i>
+            <i class="icon-format_align_right" @click="textAlign = 'right'"></i>
+            <i class="icon-print" @click="window.print()"></i>
+        </div>
+    </header>
+
+
+    <div class="main scrollbar noprint"  v-bind:style="{ height: mainHeight + 'px' }" v-bind:class="{ 'mainLeftM': ifMenuShow, 'aleft': textAlign === 'left','acenter': textAlign === 'center','aright': textAlign === 'right'}">
+        <div class="conent" v-html="pageContent" v-bind:style="zoomStyle"></div>
+
+        <div class="clear"></div>
+    </div>
+
+    <!--专门只为打印的内容-->
+    <div class="conent print" style="display:none" v-html="pageContent"></div>
+</div>
+<!-- 先引入 Vue -->
+<script>
+
+var app = new Vue({
+        el: '#app',
+        data: function() {
+            return {
+                // visible: false,
+                isCollapse: false,
+                currentNav: 0,
+                activeName2: 'first',
+                pageNum: 1, 
+                currentPage: 1,
+                pageContent: '',
+                asideHeight: 300,
+                mainHeight: 300,
+                ifMenuShow: true,
+                zoomNum: '1.0',
+                textAlign: 'left',
+                zoomStyle: {},
+                pageDatas: ['<div style="position:absolute;top:0.000000px;left:0.000000px"><nobr><img height="1123.000000" width="794.000000" src ="img/bg00001.jpg"/></nobr></div><p><span style="font-family:Verdana;font-size:15.840000px;font-weight:bold;color:#494949;"><span style="position:absolute;top:163.153320px;left:173.245224px"><nobr>HACKATHON UNI - CODE 2019 BASES </nobr></span></span></p><p><span style="font-family:Verdana;font-size:10.080000px;font-style:normal;font-weight:normal;color:#494949;"><span style="position:absolute;top:247.734451px;left:119.975288px"><nobr>El Congreso de Desarrollo Emprendedor (CODE) a través del de Centro </nobr></span><span style="position:absolute;top:272.213226px;left:119.975288px"><nobr>Cultural Avanzada Tecnológica (CCAT) , tiene como uno de sus objetivos </nobr></span><span style="position:absolute;top:296.692047px;left:119.975288px"><nobr>promover y difundir la cultura emprendedora así como el trabajo colaborativo que </nobr></span><span style="position:absolute;top:320.690918px;left:119.975288px"><nobr>junto a la tecnología resuelvan un reto y en ese marco organiza la “ HACKATHON </nobr></span><span style="position:absolute;top:345.196442px;left:119.975288px"><nobr>UNI-2019 ” con el objetivo de promover la participación de innovadores </nobr></span><span style="position:absolute;top:369.675385px;left:119.975288px"><nobr>tecnológicos en la construcción de soluciones orientadas a atender los problemas </nobr></span><span style="position:absolute;top:393.674225px;left:119.975288px"><nobr>más recurrentes en una casa de estudios la Universidad Nacional de Ingeniería. </nobr></span></span></p><p><span style="font-family:Verdana;font-size:10.080000px;font-style:normal;font-weight:normal;color:#494949;"><span style="position:absolute;top:429.219147px;left:119.975288px"><nobr>La Hackathon llamada “ HACKATHON UNI-2019 ” , será organizada por el </nobr></span><span style="position:absolute;top:453.217987px;left:119.975288px"><nobr>Congreso de Desarrollo Emprendedor con la colaboración de la Universidad Nacional </nobr></span><span style="position:absolute;top:477.256836px;left:119.975288px"><nobr>de Ingeniera y la Municipalidad del Rímac. </nobr></span></span></p><p><span style="font-family:Trebuchet MS;font-size:10.080000px;font-weight:bold;color:#000000;"><span style="position:absolute;top:550.647034px;left:119.975235px"><nobr>I. </nobr></span></span></p><p><span style="font-family:Verdana;font-size:10.080000px;font-weight:bold;text-decoration:underline;color:#000000;"><span style="position:absolute;top:549.760010px;left:147.824020px"><nobr>OBJETIVO GENERAL </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.080000px;font-weight:bold;color:#494949;"><span style="position:absolute;top:587.582214px;left:119.975235px"><nobr>1. </nobr></span></span></p><p><span style="font-family:Verdana;font-size:10.080000px;font-style:normal;font-weight:normal;color:#494949;"><span style="position:absolute;top:586.238220px;left:148.303665px"><nobr>Generar soluciones a través de herramientas tecnológicas a los principales </nobr></span><span style="position:absolute;top:611.197083px;left:148.303665px"><nobr>malestares de los estudiantes de la Universidad Nacional de Ingeniería con el </nobr></span><span style="position:absolute;top:635.235962px;left:148.303665px"><nobr>propósito de contribuir a la mejora de la vida universitaria. </nobr></span></span></p><p><span style="font-family:Trebuchet MS;font-size:10.080000px;font-weight:bold;color:#000000;"><span style="position:absolute;top:708.626160px;left:119.975235px"><nobr>II. </nobr></span></span></p><p><span style="font-family:Verdana;font-size:10.080000px;font-weight:bold;text-decoration:underline;color:#000000;"><span style="position:absolute;top:707.739136px;left:147.824020px"><nobr>OBJETIVOS ESPECIFICOS </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.080000px;font-weight:bold;color:#494949;"><span style="position:absolute;top:745.561340px;left:119.975235px"><nobr>1. </nobr></span></span></p><p><span style="font-family:Verdana;font-size:10.080000px;font-style:normal;font-weight:normal;color:#494949;"><span style="position:absolute;top:744.217468px;left:148.303665px"><nobr>Partición de la comunidad universitaria y externos proponiendo soluciones </nobr></span><span style="position:absolute;top:760.536682px;left:148.303665px"><nobr>tecnológicas. </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.080000px;font-weight:bold;color:#494949;"><span style="position:absolute;top:798.385498px;left:119.975235px"><nobr>2. </nobr></span></span></p><p><span style="font-family:Verdana;font-size:10.080000px;font-style:normal;font-weight:normal;color:#494949;"><span style="position:absolute;top:797.041565px;left:148.303665px"><nobr>Encontrar equipos que desarrollen soluciones a los desafíos establecidos en el </nobr></span><span style="position:absolute;top:821.520386px;left:148.303665px"><nobr>hackathon UNI. </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.080000px;font-weight:bold;color:#000000;"><span style="position:absolute;top:860.342590px;left:119.975235px"><nobr>3. </nobr></span></span></p><p><span style="font-family:Verdana;font-size:10.080000px;font-style:normal;font-weight:normal;color:#494949;"><span style="position:absolute;top:858.998718px;left:148.303665px"><nobr>Generar nuevos contenidos que promuevan la participación de los mismos </nobr></span><span style="position:absolute;top:882.997559px;left:148.303665px"><nobr>estudiantes y personas externas en concursos donde pongan a prueba sus </nobr></span><span style="position:absolute;top:906.996399px;left:148.303665px"><nobr>conocimientos. </nobr></span></span></p>','<div style="position:absolute;top:0.000000px;left:0.000000px"><nobr><img height="1123.000000" width="794.000000" src ="img/bg00002.jpg"/></nobr></div><p><span style="font-family:Trebuchet MS;font-size:10.080000px;font-weight:bold;color:#000000;"><span style="position:absolute;top:189.617188px;left:119.975235px"><nobr>III. <span style="font-family:Verdana;font-weight:bold;text-decoration:underline;">DESAFIOS </span></nobr></span></span></p><p><span style="font-family:Arial;font-size:10.080000px;font-weight:bold;color:#494949;"><span style="position:absolute;top:227.439377px;left:119.975235px"><nobr>1. </nobr></span></span></p><p><span style="font-family:Verdana;font-size:10.080000px;font-style:normal;font-weight:normal;color:#494949;"><span style="position:absolute;top:226.095383px;left:148.303665px"><nobr>Habilitar los espacios de proyectos interdisciplinario para trabajo de </nobr></span><span style="position:absolute;top:250.614258px;left:148.303665px"><nobr>investigación con fondo del estado o libre. </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.080000px;font-weight:bold;color:#494949;"><span style="position:absolute;top:288.436432px;left:119.975235px"><nobr>2. </nobr></span></span></p><p><span style="font-family:Verdana;font-size:10.080000px;font-style:normal;font-weight:normal;color:#494949;"><span style="position:absolute;top:287.092529px;left:148.303665px"><nobr>Digitalizar los servicios de las facultades o de la UNI para evitar las colas. </nobr></span></span></p><p><span style="font-family:Verdana;font-size:11.160001px;font-style:normal;font-weight:normal;color:#494949;"><span style="position:absolute;top:351.908844px;left:146.385071px"><nobr>Estos retos podrán ser resueltos por los equipos participantes en el </nobr></span><span style="position:absolute;top:378.787506px;left:146.385071px"><nobr>hackathon, mediante el desarrollo de prototipos de una solución basada </nobr></span><span style="position:absolute;top:405.693024px;left:146.385071px"><nobr>en las tecnologías sugeridas durante el Taller Vivencial. </nobr></span></span></p><p><span style="font-family:Trebuchet MS;font-size:10.080000px;font-weight:bold;color:#494949;"><span style="position:absolute;top:480.616638px;left:119.975235px"><nobr>IV. <span style="font-family:Verdana;font-weight:bold;text-decoration:underline;color:#000000;">PÚBLICO OBJETIVO </span></nobr></span></span></p><p><span style="font-family:Trebuchet MS;font-size:10.080000px;font-style:normal;font-weight:normal;color:#494949;"><span style="position:absolute;top:517.094910px;left:129.088547px"><nobr>√ <span style="font-family:Verdana;">Universidades, Incubadoras, Comunidades tecnológicas Instituciones públicas, </span></nobr></span><span style="position:absolute;top:542.053772px;left:148.303665px"><nobr><span style="font-family:Verdana;">privadas, empresariado MYPE y público en general que promueven la </span></nobr></span><span style="position:absolute;top:566.559204px;left:148.303665px"><nobr><span style="font-family:Verdana;">innovación y desarrollo tecnológico. </span></nobr></span></span></p><p><span style="font-family:Trebuchet MS;font-size:10.080000px;font-style:normal;font-weight:normal;color:#494949;"><span style="position:absolute;top:603.517456px;left:129.088547px"><nobr>√ <span style="font-family:Verdana;">Innovadores tecnológicos, estudiantes y/o egresados de tecnologías de la </span></nobr></span><span style="position:absolute;top:628.036316px;left:148.303665px"><nobr><span style="font-family:Verdana;">información y/o computación, u otras carreras afines. </span></nobr></span></span></p><p><span style="font-family:Verdana;font-size:10.080000px;font-style:normal;font-weight:normal;color:#494949;"><span style="position:absolute;top:662.594604px;left:146.385071px"><nobr>Los participantes deben conformar equipos con un mínimo de tres (03) y con </nobr></span></span></p><p><span style="font-family:Verdana;font-size:10.080000px;font-style:normal;font-weight:normal;color:#494949;"><span style="position:absolute;top:687.553467px;left:146.385071px"><nobr>un máximo de cuatro (04) miembros por afinidad y/o intereses comunes, hasta </nobr></span></span></p><p><span style="font-family:Verdana;font-size:10.080000px;font-style:normal;font-weight:normal;color:#494949;"><span style="position:absolute;top:711.578918px;left:146.385071px"><nobr>un número de 80 inscritos conforme a las indicaciones de las presentes bases. </nobr></span></span></p><p><span style="font-family:Trebuchet MS;font-size:10.080000px;font-weight:bold;color:#494949;"><span style="position:absolute;top:784.562195px;left:119.975235px"><nobr>V. <span style="font-family:Verdana;font-weight:bold;text-decoration:underline;color:#000000;">POSTULACIÓN E INSCRIPCIÓN </span></nobr></span></span></p><p><span style="font-family:Verdana;font-size:10.080000px;font-style:normal;font-weight:normal;color:#494949;"><span style="position:absolute;top:819.600464px;left:119.975288px"><nobr>El plazo de inscripción se inicia el 21 de setiembre y finaliza el 15 de agosto del 2019. </nobr></span><span style="position:absolute;top:843.119446px;left:119.975288px"><nobr>Ninguna inscripción será aceptada una vez concluido el plazo indicado. </nobr></span></span></p><p><span style="font-family:Verdana;font-size:10.080000px;font-style:normal;font-weight:normal;color:#494949;"><span style="position:absolute;top:878.197754px;left:119.975288px"><nobr>Una vez realizada la inscripción hasta el límite de 80 participantes, deberán asistir </nobr></span><span style="position:absolute;top:902.676575px;left:119.975288px"><nobr>obligatoriamente a las charlas preparatorias para la Hackathon UNI, que incluirán </nobr></span><span style="position:absolute;top:926.702148px;left:119.975288px"><nobr>temas sobre protección al consumidor, Derecho de Autor en el software, consumo </nobr></span><span style="position:absolute;top:951.180969px;left:119.975288px"><nobr>responsable, en fecha que serán notificadas al momento de la inscripción. </nobr></span></span></p>','<div style="position:absolute;top:0.000000px;left:0.000000px"><nobr><img height="1123.000000" width="794.000000" src ="img/bg00003.jpg"/></nobr></div><p><span style="font-family:Verdana;font-size:10.080000px;font-style:normal;font-weight:normal;color:#494949;"><span style="position:absolute;top:178.097656px;left:111.821312px"><nobr>Las inscripciones estarán disponibles a través de la página del evento: </nobr></span><span style="position:absolute;top:202.096512px;left:111.821312px"><nobr><span style="color:#0000FF;">www.codecongreso.com </span><span style="color:#494949;">donde se puede acceder y completar el formulario de </span></nobr></span><span style="position:absolute;top:226.575363px;left:111.821312px"><nobr>registro al evento. </nobr></span></span></p><p><span style="font-family:Trebuchet MS;font-size:10.080000px;font-weight:bold;color:#494949;"><span style="position:absolute;top:299.091949px;left:119.975235px"><nobr>VI. <span style="font-family:Verdana;font-weight:bold;text-decoration:underline;color:#000000;">FECHA Y LUGAR </span></nobr></span></span></p><p><span style="font-family:Verdana;font-size:10.080000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:333.677094px;left:119.975288px"><nobr>S <span style="color:#494949;">e realizará el domingo 28 de octubre en las instalaciones de la Universidad </span></nobr></span><span style="position:absolute;top:358.635742px;left:119.975288px"><nobr><span style="color:#494949;">Nacional de Ingeniería. </span></nobr></span></span></p><p><span style="font-family:Verdana;font-size:10.080000px;font-style:normal;font-weight:normal;color:#494949;"><span style="position:absolute;top:969.420166px;left:111.821312px"><nobr>El Jurado calificador, seleccionado por el Congreso de Desarrollo Emprendedor, evaluará </nobr></span><span style="position:absolute;top:993.421631px;left:111.821312px"><nobr>los prototipos presentados por los grupos participantes, a fin de dar a conocer al 1er, 2do </nobr></span><span style="position:absolute;top:1017.932495px;left:111.821312px"><nobr>puesto de la Hackathon UNI, siendo la fecha establecida para la premiación el domingo 29 </nobr></span><span style="position:absolute;top:1042.411255px;left:111.821312px"><nobr>de agosto entre las 19h30 y 20h00 , en la Facultad de Ingeniería Industrial y Sistemas de </nobr></span><span style="position:absolute;top:1066.410156px;left:111.821312px"><nobr>la UNI. </nobr></span></span></p>']
+            }
+        },
+        mounted: function() {
+            this.$nextTick(function() {
+                this.pageNum = this.pageDatas.length;
+                this.pageContent = this.pageDatas[0];
+
+                this.setLeftMenuHeight();
+            })
+        },
+        watch: {
+            'currentPage': function(newVal, oldValue) {
+                // console.log('newVal ' + newVal, 'oldValue ' + oldValue);
+                if (newVal) {
+                    this.pageContent = this.pageDatas[this.currentPage - 1];
+                }
+            },
+            'zoomNum': function(newVal, oldValue) {
+                if (newVal) {
+                    this.zoomStyle = {
+                        'transform': 'scale(' + newVal + ')',
+                        '-webkit-transform': 'scale(' + newVal + ')',
+                        '-ms-transform': 'scale(' + newVal + ')',
+                        '-moz-transform': 'scale(' + newVal + ')',
+                        '-o-transform': 'scale(' + newVal + ')'
+                    }
+                }
+            }
+        },
+        methods: {
+            
+            changeCurrentPage: function(methods) {
+                switch (methods) {
+                    case 'first':
+                        this.currentPage = 1;
+                        break;
+                    case 'prev':
+                        if (this.currentPage > 1) {
+                            this.currentPage -= 1;
+                        }
+                        break;
+                    case 'next':
+                        if (this.currentPage < this.pageNum) {
+                            this.currentPage += 1;
+                        }
+                        break;
+                    case 'last':
+                        this.currentPage = this.pageNum;
+                        break;
+                }
+            },
+
+            gotoPage: function(page) {
+                console.log(page);
+                this.currentPage = page;
+            },
+            modifyZoom: function(type) {
+                switch (type) {
+                    case 'in':
+                        if (this.zoomNum < 2) {
+                            // this.zoomNum = (this.zoomNum + 0.1).toFixed(1);
+                            this.zoomNum = (parseFloat(this.zoomNum) + 0.1).toFixed(1);
+                        }
+                        break;
+                    case 'out':
+                        if (this.zoomNum > 0.5) {
+                            this.zoomNum = (parseFloat(this.zoomNum) - 0.1).toFixed(1);
+                        }
+                        break;
+                    default:
+                        break;
+                }
+                console.log(this.zoomNum);
+            },
+            setLeftMenuHeight: function() {
+                // this.asideHeight = document.body.scrollHeight - 60;
+                this.mainHeight = document.documentElement.clientHeight - 60 - 20;
+                // 60为头部导航高度， 46为menu高度， 40为上下padding
+                this.asideHeight = this.mainHeight - 20 - 46;
+            },
+            changePage: function(page) {
+                this.currentPage = page;
+                // this.pageContent = this.pageDatas[page - 1];
+            },
+            changeLeftMenu: function() {
+                this.ifMenuShow = !this.ifMenuShow;
+            }
+        }
+    });
+
+function gotoPage(page) {
+    console.log(page);
+    app.gotoPage(page);
+}
+
+</script>
+
+</html>

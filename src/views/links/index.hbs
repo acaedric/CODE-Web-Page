@@ -1,0 +1,1007 @@
+
+
+<nav class="navbar  white navbar-expand-xl navbar-dark transparencia scrolling-navbar fixed-top" style="padding:0px">
+    <div class="container container--flex">
+        <a class="navbar-brand" href="#"><img src="img/code3.png" alt="img-fluid z-depth-1-half"
+                                              style="max-height: 56px;"></a>
+     <!--
+        <div class="row d-block d-sm-none d-m-none d-lg-none d-xl-none" style="margin-left:-40px"><a
+                class="nav-link font-weight-bold light-blue-text default-color  black-text  text-monospace"
+                style="font-size: 20px;font-family: 'Yanone Kaffeesatz', sans-serif;padding:1.5px" href="/hackaton">HACKATHON</a>
+        </div>
+        <div class="row d-none d-xs-none d-sm-block d-m-block d-lg-block d-xl-none justify-content-center default-color"
+             style="margin-left:-100px"><a class="nav-link font-weight-bold black-text  text-monospace "
+                                           style="font-size: 26px;font-family: 'Yanone Kaffeesatz', sans-serif;"
+                                           href="/hackaton">"HACKATHON"</a></div>
+    -->
+
+        <button class="navbar-toggler default-color" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                style="margin-right:10px;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ml-5" id="navbarNav">
+            <ul class="navbar-nav " style="text-align: center;">
+                <li class="nav-item "><a class="nav-link font-weight-bold cyan-lighter-hover grey-text"  data-scroll
+                                        href="#inicio"><br>INICIO</a></li>
+                <li class="nav-item"><a class="nav-link font-weight-bold cyan-lighter-hover grey-text" data-scroll
+                                        href="#nosotros"><br>NOSOTROS</a></li>
+                <li class="nav-item"><a class="nav-link font-weight-bold grey-text" data-scroll href="#ejes"><br>EJES
+                    TEMÁTICOS</a></li>
+                <li class="nav-item"><a class="nav-link font-weight-bold grey-text" data-scroll href="#productos"><br>PRODUCTOS</a>
+                </li>
+                <li class="nav-item"><a class="nav-link font-weight-bold grey-text" data-scroll href="#inscripción"><br>INSCRIPCIÓN</a>
+                </li>
+                <li class="nav-item"><a class="nav-link font-weight-bold grey-text" data-scroll
+                                        href="#auspiciadores"><br>AUSPICIADORES</a></li>
+                <li class="nav-item"><a class="nav-link font-weight-bold grey-text " href="/consultar" ><br>CONTACTO</a>
+                </li>
+                <!-- 
+                    AQUI ESTA EL ENLACE AL REGISTRO PARA ENTRAR A LA CIUDAD EMPRENDEDORA:, 
+                SEGUN EL NEGRO RICARDO EL MIERCOLES ESTAREMOS LANZANDO ESTO ASI QUE POR 
+                EL MOMENTO ESTA SECCION ESTARA COMENTADA, PARA HACER PRUEBAS SIMPLEMENTE BORRA
+                EL SIGNO DE EXCLAMACION. FALTARIA PONERLE UNA FOTO DE LA CIUDAD EMPRENDEDORA 
+                AL COSTADO COMO REFERENCIA NOMAS, EN EL ARCHIVO CIUDAD.HBS-->
+                <li class="nav-item"><a class="nav-link font-weight-bold grey-text " href="/ciudadE" ><br>CIUDAD EMPRENDEDORA</a>
+                </li>
+                
+                
+
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="fondo view d-none d-xl-block" id="inicio">
+    <div class=" mask  flex-center">
+        <div class="container wow fadeInUp">
+            <div class="row justify-content-md-center text-center">
+                <div class="col-md-6 text-white " style="margin-top:350px;">
+
+                    <img src="img/code3.png" alt="" class="img-fluid ">
+                    <hr class="bg-light " style="margin-top: -20px;">
+                   {{!-- <p style="font-weight:800;color: #d00a00;" class=" h2-responsive text-center font-weight-bold">
+                        ¡Próximamente!</p> --}}
+                   {{!--  <button type="button" class="btn  font-weight-bold" data-toggle="popover" data-img="img/code3.png"  style="background-color: #FE5316;font-size:18px"
+                    
+                            onclick="window.location.href='img/cronogramacode.png'" >CRONOGRAMA(Año 2020)
+                    </button> --}}
+
+                <button type="button" class="btn  font-weight-bold" data-toggle="modal" data-target="#myModal"   style="background-color: #FE5316;font-size:18px"
+                    
+                             >CRONOGRAMA(Año 2020)
+                    </button>
+
+                 <div id="myModal" tabindex="-1" class="modal fade" role="dialog" aria-hidden="true">
+                  <div class="modal-dialog " >
+                     
+                         <div class=" modal-body-centered" >
+            
+                              <img  src="img/cronogramacode6.png" />
+                 
+            
+            </div>
+        </div>
+    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<hr class="my-5" id="nosotros">
+<div class="row"  >
+<div  class="col-1  "  >
+ <ul class="list-group  sticky-top p-5 d-none d-xl-block">
+     
+    <li class="list-group-item border-0 invisible " style="padding-inline-start">
+        
+    </li>
+    <li class="list-group-item border-0 invisible" style="padding-inline-start">
+        
+    </li>
+    <li class="list-group-item  border-0 p-0" style="padding-inline-start: 0px;">
+        <a target="_blank" class="btn rounded-circle pr-3 pl-3 pt-2 pb-2" 
+        style=" background-color:#139d93" href="https://www.facebook.com/codeuni2020/" >
+        {{!-- <i class="fab fa-facebook-f fa-2x text-red"></i> --}}
+        <span class="fab fa-facebook-f white-text pt-0 pb-0 fa-2x blue-text"></span>
+        </a>
+
+        {{!-- <button type="button" class="btn btn-fb"><i class="fab fa-facebook-f fa-2x"></i></button> --}}
+        
+        
+    </li>
+
+    <li class="list-group-item border-0 p-0" style="padding-inline-start: 0px;">
+        <a  target="_blank" class="btn rounded-circle pr-1 pl-2 pb-2 pt-2 align-content-md-center "
+        style=" background-color:#a3d525"  href="https://www.linkedin.com/in/congreso-desarrollo-emprendedor-3765501a4/?fromQR=1&challengeId=AQGIRVgQBzhjbwAAAXNgYsgUpvX0YVCDvDY0LRhsTGiD5oCRuwGabfuZOu9YhYdDDWMNAbmKkgdF9PpJ8l6zszgno5v2FcCl0w&submissionId=cd18c83a-7bc1-2216-eb12-ff4e67f1732f" >
+        {{!-- <i class="fab fa-instagram fa-2x text-red"> </i> --}}
+        <span class="fab fa-linkedin-in fa-2x white-text pb-0 pt-0 pl-1 pr-2 green-text"></span>
+        </a>
+        </a>
+        {{!-- <button type="button" class="btn btn-ins"><i class="fab fa-instagram fa-2x"></i></button> --}}
+        
+    </li>
+
+    <li class="list-group-item border-0 p-0" style="padding-inline-start: 0px;">
+        <a  target="_blank" class="btn p-2 rounded-circle" 
+        style=" background-color:#FE5316" href="https://www.youtube.com/channel/UCCZMTya_--5vNLWIYjsJ0jA" >
+        {{!-- <i class="fab fa-youtube fa-2x text-red">
+        </i> --}}
+        <span class="fab fa-youtube fa-2x white-text"></span>
+        </a>
+        {{!-- <button type="button" class="btn btn-yt"><i class="fab fa-youtube fa-2x"></i></button> --}}
+        
+    </li>
+    
+    <li class="list-group-item border-0 p-0" style="padding-inline-start: 0px;">
+        <a  target="_blank" class="btn rounded-circle  pr-1 pl-2 pb-2 pt-2 align-content-md-center "
+        style=" background-color:#f842f8" href="https://www.instagram.com/codeuni2020/" >
+        {{!-- <i class="fab fa-instagram fa-2x text-red"> </i> --}}
+        
+        <span class="fab fa-instagram fa-2x white-text pb-0 pt-0 pl-1 pr-2 pink-text"></span>
+        </a>
+        </a>
+        {{!-- <button type="button" class="btn btn-ins"><i class="fab fa-instagram fa-2x"></i></button> --}}
+        
+    </li>
+
+    
+    </ul>
+</div>
+<div  class="col-10" >  
+<main class="container ">
+    <section class="row mt-5">
+        <div class="col-md-6">
+            <img src="img/integrantescode.jpg" alt="" class=" img-fluid z-depth-1-half">
+        </div>
+        <div class="col-md-6 mt-5 mt-md-0">
+            <h1 class="mb-5 font-weight-bold text-center  rgba-cyan-strong">¿QUIÉNES SOMOS?</h1>
+            <p class="h6-responsive"><strong>Somos un equipo de estudiantes, sin fines de lucro, que con iniciativa, esfuerzo y
+                dedicación buscamos difundir la cultura emprendedora a todo aquel que se atreva a descubrir el
+                emprendedor que lleva dentro</strong>.</p>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-lg-6 ">
+                    <div class="row ">
+                    
+                        <div class="col  ">
+                        <ul class="nav nav-tabs my-3  " id="myTab" role="tablist" 
+                         >
+                         
+                        <li class="nav-item text-center my-0 col-4 " style="padding-inline-start: 0px;padding-right: 0px;margin-right: 0px;">
+                            <a class="nav-link active text-white bg-info" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><strong>Sobre el CODE</strong></a>
+                        </li>
+                         
+                        
+                        <li class="nav-item text-center col-4 " style="padding-inline-start: 0px;padding-right: 0px;margin-right: 0px;">
+                            <a class="nav-link text-white bg-info" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><strong>Misión</strong> </a>
+                        </li>
+                        
+                        
+                        <li class="nav-item text-center  col-4" style="padding-inline-start: 0px;padding-right: 0px;margin-right: 0px;">
+                            <a class="nav-link text-white bg-info" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><strong>Visión</strong></a>
+                        </li>
+                        
+                        </ul>
+                        
+                        </div>
+                        <div class="tab-content text-justify my-2 p-4" id="myTabContent">
+                        <div class=" tab-pane fade show active  "  id="home" role="tabpanel" aria-labelledby="home-tab"><strong> VIII Congreso de desarrollo emprendedor
+                                (CODE), es una iniciativa del Centro Cultural Avanzado Tecnológico (CCAT) que pertenece
+                                a la Facultad de Ingeniería Industrial y Sistemas (FIIS) de la Universidad Nacional de
+                                Ingeniería (UNI), dirigida a personas interesadas en temas de emprendimiento sostenible
+                                e innovación tecnológica que busquen adquirir o profundizar conocimientos y habilidades
+                                necesarias para impulsar sus ideas de negocio tradicional o Start-Up.</strong></div>
+                        <div class=" tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><strong> Promover la cultura emprendedora para la
+                                formación de líderes competentes que contribuyan al desarrollo del país.</strong></div>
+                        <div class=" tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><strong>Ser reconocidos como el congreso de
+                                emprendimiento más importante y grande en el marco de la innovación y tecnología del
+                                Perú</strong></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" 
+                            src="https://www.youtube.com/embed/D3pZyZKAsm4?controls=0&loop=1&playlist=0O4C9URim7I&=1&rel=0" 
+                            frameborder="0" 
+                            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<hr class="my-5" id="ejes">
+<div class="container wow bounceInLeft" style="margin-top:4em">
+    <h1 class="mb-5 font-weight-bold text-center rgba-cyan-strong">EJES TEMÁTICOS </h1>
+    <section id="examples" class="text-center">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-mb-4">
+                <div class="view overlay hm-white-slight  zoom " align="center">
+                    <img src="img/intfinan.png" class="img-fluid  " alt="Responsive image">
+                    <a target="_blank">
+                        <div class="mask"></div>
+                    </a>
+                </div>
+                <h4 class="my-4 font-weight-bold"> Inteligencia Financiera</h4>
+                <p class="grey-text"><strong> Capacidad de obtener y optimizar fuentes de ingresos buscando 
+                    una estabilidad y/o crecimiento económico.</strong>
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-mb-4">
+                <div class="view overlay  hm-white-slight  zoom" align="center">
+                    <img src="img/ecommerce.png" class="img-fluid" alt="">
+                    <a target="_blank">
+                        <div class="mask"></div>
+                    </a>
+                </div>
+                <h4 class="my-4 font-weight-bold"> Comercio Electrónico</h4>
+                <p class="grey-text" id="Section4"><strong> Consiste en la compra y venta de productos
+                     o de servicios a través de medios electrónicos.</strong>
+                    </p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-mb-4">
+                <div class="view overlay  hm-white-slight  zoom" align="center">
+                    <img src="img/cultempr1.jpeg" class="img-fluid" alt="">
+                    <a target="_blank">
+                        <div class="mask"></div>
+                    </a>
+                </div>
+                <h4 class="my-4 font-weight-bold"> Cultura Emprendedora</h4>
+                <p class="grey-text"><strong> Cualidades, conocimientos y habilidades necesarias 
+                    que posee una persona, para gestionar un proyecto concreto o su rumbo profesional. </strong></p>
+            </div>
+        </div>
+    </section>
+</div>
+<hr class="my-5" id="productos">
+<section class="container" style="margin-top:4em">
+    <h1 class="mb-5 font-weight-bold text-center rgba-cyan-strong">PRODUCTOS</h1>
+    <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+
+        <ol class="carousel-indicators">
+       <!-- <li data-target="#carousel-example-2" data-slide-to="0" ></li>-->
+            <li data-target="#carousel-example-2" data-slide-to="1"></li>
+            <li data-target="#carousel-example-2" data-slide-to="2"></li>
+           <li data-target="#carousel-example-2" data-slide-to="3"></li>
+          <!--  <li data-target="#carousel-example-2" data-slide-to="4"></li> -->
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <div class="view">
+                    <img class="d-block w-100" src="img/confevirtuales.png"
+                         alt="First slide">
+                    <div class="mask pattern-1"></div>
+
+                </div>
+                <div class="carousel-caption">
+                    <h3 class="h3-responsive font-weight-bold rgba-green-strong">CONFERENCIAS VIRTUALES</h3>
+               <!--     <p class="rgba-stylish-light text-center   d-block d-sm-none d-m-none d-lg-none d-xl-none h6"
+                       style="margin-top: 0px;margin-bottom:-0.5px">Personas de gran trayectoria en los distintos campos
+                        de emprendimiento</p>  -->
+                    <p class="rgba-stylish-light text-center  my-4 mx-3 d-none d-xs-none d-m-block d-lg-block h5">
+                         Reunimos a los participantes del evento con personas de gran trayectoria en los distintos
+                        campos de emprendimiento desde Start Up’s exitosas hasta organizaciones sin fines de 
+                        lucro para que compartan sus historias de éxito y fracaso, además de dar las últimas
+                        novedades de las innovaciones tecnológicas.</p> 
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="view">
+                    <img class="d-block w-100" src="img/tallervirtual.jpg"
+                         alt="Second slide">
+                    <div class="mask pattern-1"></div>
+                </div>
+                <div class="carousel-caption">
+                    <h3 class="h3-responsive font-weight-bold rgba-green-strong">LINEA DE TALLERES VIRTUALES</h3>
+                 <!--   <p class="rgba-stylish-light text-center   d-block d-sm-none d-m-none d-lg-none d-xl-none h6"
+                       style="margin-top: 0px;margin-bottom:0px">Sumérjete en el mundo del emprendimiento con éxito</p>
+                       -->
+                    <p class="rgba-stylish-light text-center  my-4 mx-3 d-none d-xs-none d-m-block d-lg-block h5"> 
+                        Mediante plataformas virtuales y transmisiones en vivo llevaremos a todos
+                        los usuarios los talleres que el Congreso de Desarrollo Emprendedor otorgará.
+                        En tales talleres aprenderá las herramientas y métodos necesarios
+                        para poder llevar su emprendimiento por el camino del éxito.
+                    </p> 
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="view">
+                    <img class="d-block w-100" src="img/ciuemprend.jpg"
+                         alt="Third slide">
+                    <div class="mask pattern-1"></div>
+                </div>
+                <div class="carousel-caption">
+                    <h3 class="h3-responsive font-weight-bold rgba-green-strong">CIUDAD EMPRENDEDORA</h3>
+    
+
+                    <p class="rgba-stylish-light text-center  my-4 mx-3 d-none d-xs-none d-m-block d-lg-block h5"> 
+                         La Feria del Emprendedor, siendo nuestro principal evento para colaboradores, aliados y auspiciadores,
+                         tendrá una nueva manera de llegar a todos los participantes del Congreso de Desarrollo Emprendedor;
+                          esta nueva versión será totalmente virtual, desde nuestra página web todo usuario interesado 
+                          podrá observar las distintas organizaciones en un entorno 3D, donde podrá acceder 
+                          a información como productos y servicios brindados por tal organización. </p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon orange darken-4 d-block d-sm-none" style="width:35px;height:35px"
+                  aria-hidden="true"></span>
+            <span class="carousel-control-prev-icon orange darken-4 d-none d-sm-block" style=""
+                  aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+            <span class="carousel-control-next-icon orange darken-4 d-block d-sm-none" style="width:35px;height:35px"
+                  aria-hidden="true"></span>
+            <span class="carousel-control-next-icon orange darken-4 d-none d-sm-block" style=""
+                  aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <section class="container" style="margin-top:4em;">
+    <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+        <div class="card-header pr-2  btn btn-default" role="tab" id="headingOne1">
+            <a class="collapsed text-white" data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1"
+               aria-expanded="false"
+               aria-controls="collapseOne1">
+                <h5 class="mb-0 pr-4">
+                    <strong >Ponentes Magistrales CODE 2019</strong><i class="fas fa-angle-down rotate-icon  text-white ml-3"></i>
+                </h5>
+            </a>
+        </div>
+        <div id="collapseOne1" class="collapse" role="tabpanel" aria-labelledby="headingOne1"
+             data-parent="#accordionEx">
+            <div class="card-body">
+                <div class="row" style="margin-bottom: 1%;">
+                    <div class="col-lg-5 col-md-12 align-middle">
+                        <img src="img/roque2.jpg" alt="" class="img-fluid rounded-circle">
+                    </div>
+                    <div class="col-lg-7 col-md-12 justify-content-md-center align-middle" style="margin-top: 5%;">
+                        <h1 class="mb-5 font-weight-bold text-center img-responsive center-block">Roque
+                            Benavides</h1>
+                        <p>Ha sido Presidente del Directorio y gerente general de la Compañía de Minas
+                            Buenaventura (2001-2017), Presidente de la Sociedad Nacional de Minería, Petróleo y
+                            Energía (1992-1995), Presidente del Instituto de Seguridad Minera ISEM, director del
+                            Banco de Crédito del Perú, director de la Sociedad Minera El Brocal S.A.A., director
+                            de Unión Andina de Cementos, entre otras empresas.
+
+                            Ejerció el cargo de Presidente de la CONFIEP entre 1999-2001 y entre 2017-2019. </p>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 1%;">
+                    <div class="col-lg-5 col-md-12 align-middle">
+                        <img src="img/pedrojose4.jpg" alt=""
+                             class="img-fluid img-responsive center-block rounded-circle">
+                    </div>
+                    <div class="col-lg-7 col-md-12 justify-content-md-center align-middle" style="margin-top: 5%;">
+                        <h1 class="mb-5 font-weight-bold text-center">Pedro José Mateos Felipe</h1>
+                        <p>Experto en diseñar, implementar y ejecutar ecosistemas de innovación e
+                            intraemprendimiento (estrategia, management y praxis) con Lean Startup y
+                            metodologías ágiles para Corporaciones y Sector Público.
+                            Incubadoras, aceleradoras, hackatons y bootcamps.
+                            Inversor privado en Startups
+                            EXMA International Speaker.
+                            Mentor.
+                            Profesor.
+                            Más de 10 años diseñando e implementando programas/proyectos en Corporaciones (>40)
+                            y Gobiernos en Europa, Asia, África y Latinoamérica. </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 col-md-12 align-middle">
+                        <img src="img/CarlosTovar5.png" alt="" class="img-fluid rounded-circle">
+                    </div>
+                    <div class="col-lg-7 col-md-12 justify-content-md-center align-middle" style="margin-top: 5%;">
+                        <h1 class="mb-5 font-weight-bold text-center">Carlos Tovar</h1>
+                        <p>Principal Architect – Technology & Co-Fundador de Ariwonto, una Startup de I+D de Software (Austin, Texas, USA | Lima, Perú).  Experto en la tecnología de IOTA, 3ra Gen Distributed Ledger Technology (DLT), con un mundo de conocimiento y experiencia en IoT, AI, ML, GDB e incluso Q#, el lenguaje de programación cuántica de Microsoft. Múltiples ponencias, destacando su participación en la reciente Prospecta de las Américas 2019 (Oct 24-25), organizada por la OEA con el auspicio de la PUCP: Taller de Computación Cuántica, en la que participó Google.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 col-md-12 align-middle">
+                        <img src="img/carlosbarrientos2.jpg" alt="" class="img-fluid rounded-circle">
+                    </div>
+                    <div class="col-lg-7 col-md-12 justify-content-md-center align-middle" style="margin-top: 5%;">
+                        <h1 class="mb-5 font-weight-bold text-center">Carlos Barrientos Espinoza</h1>
+                        <p>CEO en PETROPERU S.A. Direcciòn general de empresas nacionales o multilatinas lìderes en
+                            proceso de expansiòn geográfica. Experiencia directiva y comercial en desarrollo de
+                            negocios, soluciones integrales para la Industria y comercio, posicionamiento de marcas y
+                            canales, enfoque estratègico, liderazgo, trabajo en equipo y desarrollo de personas.
+                            Reconocido en el ranking de los 100 lìderes empresariales con mejor reputaciòn en el paìs.
+                            Northwestern University - Kellogg School of Management. CEO Management Program, Management
+                            (2014).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       <!-- 
+           <div class="card-header btn btn-default" role="tab" id="headingTwo2">
+            <a class="collapsed text-white" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
+               aria-expanded="false" aria-controls="collapseTwo2">
+                <h5 class="mb-0">
+                    Mas información sobre la linea de talleres
+                    <i class="fas fa-angle-down rotate-icon text-white"></i>
+                </h5>
+            </a>
+        </div>
+
+        
+        <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
+             data-parent="#accordionEx">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-2 col-md-12 col-mb-2">
+                        <div class="" align="center">
+                            <h4 class="my-4 font-weight-bold"> 1</h4>
+                            <h5 class="my-4 font-weight-bold">SEGMENTACIÓN ESTRATÉGICA </h5>
+                            <p class="grey-text text-center"> En este primer taller aprenderás a segmentar a tu
+                                mercado para definir a tu público objetivo al cual te dirigirás a vender tu
+                                producto. Totalmente importante para iniciar tu emprendemiento. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-12 col-mb-2">
+                        <div class="" align="center">
+                            <h4 class="my-4 font-weight-bold">2</h4>
+                            <h5 class="my-4 font-weight-bold">IDENTIFICA TU NÚCLEO</h5>
+                            <p class="grey-text text-center"> Tan importante como encontrar a su cliente es crear un
+                                gran producto que solucione el problema del cliente. Aprenderás cómo determinar y
+                                cuantificar el valor que su cliente obtiene de su producto. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-12 col-mb-2">
+                        <div class="" align="center">
+                            <h4 class="my-4 font-weight-bold">3 </h4>
+                            <h5 class="my-4 font-weight-bold">ANALIZA LA COMPRA </h5>
+                            <p class="grey-text text-center"> Aprenderás a identificar quién toma la decisión final
+                                de compra como el proceso por el cual el cliente decide comprar su producto. </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-12 col-mb-2">
+                        <div class="" align="center">
+                            <h4 class="my-4 font-weight-bold">4 </h4>
+                            <h5 class="my-4 font-weight-bold"> MODELA TU NEGOCIO </h5>
+                            <p class="grey-text text-center">
+                                Utilizarás lo aprendido para saber cómo generar un modelo innovador para su negocio.
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-12 col-mb-2">
+                        <div class="" align="center">
+                            <h4 class="my-4 font-weight-bold">5 </h4>
+                            <h5 class="my-4 font-weight-bold"> CREA TU MVBP</h5>
+                            <p class="grey-text text-center">Aprenderás qué es y cómo hacer tu Mínimo Producto
+                                Viable Comercializable (MVBP).
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-12 col-mb-2">
+                        <div class="" align="center">
+                            <h4 class="my-4 font-weight-bold">6 </h4>
+                            <h5 class="my-4 font-weight-bold"> DESARROLLA TU NEGOCIO</h5>
+                            <p class="grey-text text-center">¡Vamos más allá del MVBP! Aprenderás a desarrollar un
+                                plan de producto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+-->
+<hr class="my-5" id="inscripción">
+
+
+<div class="container wow bounceInCenter" style="margin-top:4em">
+    <h1 class="mb-5 font-weight-bold text-center rgba-cyan-strong" style="margin-block-end: 0px;">INSCRIPCIÓN
+         </h1>
+    <section id="examples" class="text-center">
+            
+                <div class="view overlay hm-white-slight " align="center">
+                    <img src="img/registro.png"  align="center">
+                    <div class="mask"></div>
+                    <h4 class="my-4 font-weight-bold text-center"> Si deseas formar parte del equipo CODE, este es el lugar indicado.</h4> 
+                    <p class="grey-text text-center">Registra tus datos pulsando el botón "Ingreso de datos".</p>
+                    <button class="btn btn-default" data-toggle="modal" data-target="#modalQuickView3">Ingreso de datos
+                    </button>
+                   <form onsubmit="return validaregistro()" action="/" method="post">
+                        <div class="modal fade" id="modalQuickView3" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <div class="row justify-content-md-center">
+                                            <br/>
+                                            <h2 class="h2-responsive product-name">
+                                                <strong style="color: #222222">REGISTRO DE DATOS</strong>
+                                            </h2>
+                                            <br/>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="row">
+                                                    <div class="col-lg-11 offset-lg-1">
+                                                        <div class="md-form form-group">
+                                                            <input name="nombres" type="text" class="form-control"
+                                                                   id="nombres" placeholder="Nombres">
+                                                            <label for="nombres">Nombres completos
+                                                                </label>
+                                                        </div>
+                                                        <div class="md-form form-group">
+                                                            <input name="apellidos" type="text" class="form-control"
+                                                                   id="apellidos" placeholder="Apellidos">
+                                                            <label for="apellidos">Apellidos completos 
+                                                                </label>
+                                                        </div>
+                                                        <div class="md-form form-group">
+                                                            <input name="email" type="email" class="form-control"
+                                                                   id="email" placeholder="Email">
+                                                            <label for="email">Correo electrónico (email)</label>
+                                                        </div>
+                                                        <div class="md-form form-group">
+                                                            <input name="telefono" type="tel" class="form-control"
+                                                                   id="telefono" placeholder="Telefono">
+                                                            <label for="telefono">Teléfono</label>
+                                                        </div>
+                                                        <div class="md-form form-group">
+                                                            <input name="institucion" type="text" class="form-control"
+                                                                   id="institucion" placeholder="Institución">
+                                                            <label for="institucion">Institución donde estudia o trabaja</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-lg-6">
+                                                <div class="row">
+                                                    <div class="col-lg-11">
+                                                        <!--
+                                                        <div class="md-form form-group">
+                                                            <input name="institucion" type="text" class="form-control"
+                                                                   id="institucion" placeholder="Institución">
+                                                            <label for="institucion">Institución donde estudia o
+                                                                trabaja</label>
+                                                        </div>
+                                                        -->
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!--
+                                       <div class="row" style="margin-left: 8%;margin-right: 8%">
+                                            <br/>
+                                            <h6 class="h4-responsive product-name">
+                                                <span style="color: #222222">Se le enviará el ticket virtual a su correo, esté pendiente del envío. La entrada a los eventos se realizará por medio de este y la confirmación de sus datos por medio del DNI</span>
+                                            </h6>
+                                            <br/>
+                                        </div>
+                                        !-->
+                                        <div class="row text-center"
+                                             style="margin-left: 3%;margin-right: 8%;padding-bottom: 1.8%;">
+
+                                            <button type="button" class="btn btn-deep-orange"
+                                                    data-dismiss="modal">Cerrar
+                                            </button>
+                                            <button class="btn btn-default" type="submit">Registrar
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+           
+        </div>
+    </section>
+    </div>
+</div>
+
+
+
+  {{!--   --------------------------------------------------------------- --}}
+<!--            <div class="col-lg-3 col-md-12 col-mb-3">
+                <div class="view overlay hm-white-slight " align="center">
+                    <img src="img/diploma.png" class="img-fluid  " alt="">
+                    <div class="mask"></div>
+                    <h4 class="my-4 font-weight-bold">Entrada y Certificado</h4>
+                    <p class="grey-text text-center">Se le enviará el ticket virtual a su correo una vez registrado
+                        completamente y posterior certificado luego de su asistencia al congreso. Esté pendiente del
+                        envío.</p>
+                </div>
+            </div>
+        </div>
+        !-->
+    
+ <!--<section>
+        <script src="https://checkout.culqi.com/js/v3"></script>
+        <script>
+            Culqi.publicKey = 'pk_test_1JJPEuOG12RFqhv6';
+            Culqi.init();
+        </script>
+        <form >
+            <div>
+                <label>
+                    <span>Correo Electrónico</span>
+                    <input type="text" size="50" data-culqi="card[email]" id="card[email]">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span>Número de tarjeta</span>
+                    <input type="text" size="20" data-culqi="card[number]" id="card[number]">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span>CVV</span>
+                    <input type="text" size="4" data-culqi="card[cvv]" id="card[cvv]">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span>Fecha expiración (MM/YYYY)</span>
+                    <input size="2" data-culqi="card[exp_month]" id="card[exp_month]">
+                    <span>/</span>
+                    <input size="4" data-culqi="card[exp_year]" id="card[exp_year]">
+                </label>
+            </div>
+            <button class="btn font-weight-bold" style="background-color: #FE5316;font-size:18px" id="btn_pagar">Pagar</button>
+        </form>
+
+        <script>
+            $('#btn_pagar').on('click', function(e) {
+                // Crea el objeto Token con Culqi JS
+                Culqi.createToken();
+                e.preventDefault();
+            });
+        </script>
+        <script>
+            function culqi() {
+                if (Culqi.token) { // ¡Objeto Token creado exitosamente!
+                    var token = Culqi.token.id;
+                    alert('Se ha creado un token:' + token);
+                    //En esta linea de codigo debemos enviar el "Culqi.token.id"
+                    //hacia tu servidor con Ajax
+                } else { // ¡Hubo algún problema!
+                    // Mostramos JSON de objeto error en consola
+                    console.log(Culqi.error);
+                    alert(Culqi.error.user_message);
+                }
+            };
+        </script>
+        &lt;!&ndash;<script>
+            // Configura tu llave pública
+            Culqi.publicKey = 'pk_test_1JJPEuOG12RFqhv6';
+            Culqi.init();
+            // Configura tu Culqi Checkout
+            Culqi.settings({
+                title: 'CODE',
+                currency: 'PEN',
+                description: 'Entrada General CODE',
+                amount: 50000
+            });
+
+        </script>
+        <script>
+            function culqi() {
+                if (Culqi.token) { // ¡Objeto Token creado exitosamente!
+                    var token = Culqi.token.id;
+                    alert('Se ha creado un token:' + token);
+                    //En esta linea de codigo debemos enviar el "Culqi.token.id"
+                    //hacia tu servidor con Ajax
+                } else { // ¡Hubo algún problema!
+                    // Mostramos JSON de objeto error en consola
+                    console.log(Culqi.error);
+                    alert(Culqi.error.user_message);
+                }
+            };
+            $(document).ready(function(){
+                $('#culqi-card-form').on('submit',function(e){
+                    e.preventDefault();
+                    Culqi.createToken();
+
+                });
+            });
+        </script>&ndash;&gt;
+    </section>-->
+    <hr class="my-5" id="auspiciadores">
+
+    <section class="container" style="margin-top:5em">
+        <div class="row">
+            <div id="carousel-with-lb" class="carousel slide carousel-multi-item" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-with-lb" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-with-lb" data-slide-to="1"></li>
+                    <li data-target="#carousel-with-lb" data-slide-to="2"></li>
+                    <li data-target="#carousel-with-lb" data-slide-to="3"></li>
+                    <li data-target="#carousel-with-lb" data-slide-to="4"></li>
+                </ol>
+                <div class="  carousel-inner mdb-lightbox" role="listbox">
+                    <div id="mdb-lightbox-ui"></div>
+
+                    <div class=" carousel-item active text-center ">
+
+                        <h1 class="mb-5 font-weight-bold text-center rgba-cyan-strong">AUSPICIADORES</h1>
+
+
+                        <div class="col-md-4 d-md-inline-block "
+                             onclick="window.location.href='http://www.fiis.uni.edu.pe/'">
+                            <img src="img/auspiciadores/logofiisuni.png" class="img-overlay img-circle img-fluid"
+                                >
+                            <a target="_blank" href="http://www.fiis.uni.edu.pe/">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 d-md-inline-block "
+                             onclick="window.location.href='https://www.uni.edu.pe'">
+                            <img src="img/auspiciadores/logouni.png" class="img-overlay img-circle img-fluid"
+                            >
+                            <a target="_blank" href="https://www.uni.edu.pe">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 d-md-inline-block "
+                             onclick="window.location.href='https://www.facebook.com/ccat.pe' ">
+                            <img src="img/auspiciadores/ccat.png" class="img-overlay img-circle img-fluid"
+                            >
+                            <a target="_blank" href="https://www.facebook.com/ccat.pe">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        {{!-- <div class="col-md-4 d-md-inline-block " onclick="window.location.href='http://codeges.com'">
+                            <img src="img/logocodeges.jpg" class="img-overlay img-circle img-fluid"
+                                 >
+                            <a href="http://codeges.com">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 d-md-inline-block "
+                             onclick="window.location.href='https://www.jbenterprisegroup.com'">
+                            <img src="img/logojb.png" class="img-overlay img-circle img-fluid"
+                                 >
+                            <a href="https://www.jbenterprisegroup.com">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 d-md-inline-block " onclick="window.location.href='img/compupalace.png'">
+                            <img src="img/compupalace.png" class="img-overlay img-circle img-fluid"
+                                 >
+                            <a href="http://www.compupalace.com/">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </div> --}}
+                    </div>
+                    <div class=" carousel-item text-center">
+                        <h1 class="mb-5 font-weight-bold text-center rgba-cyan-strong">ALIANZAS ESTRATÉGICAS</h1>
+                       
+                        <div class="col-md-3 col-sm-3 col-xs-3 d-md-inline-block "
+                             onclick="window.location.href='https://www.facebook.com/AurusPeru'">
+                            <img href="https://www.facebook.com/AurusPeru" src="img/Nuevas alianzas/AURUS1.png"
+                                 class="img-overlay img-circle img-fluid" >
+                            <a href="https://www.facebook.com/AurusPeru">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        
+                        <figure class="col-md-3 col-sm-3 col-xs-3 d-md-inline-block justify-content-md-center text-center"
+                                onclick="window.location.href='https://www.facebook.com/IndutexsegUnmsm'">
+                            <img src="img/Nuevas alianzas/Industexseg1.png" class="img-overlay img-circle img-fluid"
+                                >
+                            <a href="https://www.facebook.com/IndutexsegUnmsm">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </figure>
+
+                        <figure class="col-md-3 col-sm-3 col-xs-3 d-md-inline-block"
+                                onclick="window.location.href='https://www.facebook.com/EngineerIndustrial'">
+                            <img src="img/Nuevas alianzas/Ingenieros_Industriales.png" class="img-overlay img-circle img-fluid"
+                            >
+                            <a href="https://www.facebook.com/EngineerIndustrial">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </figure>
+                        
+                        <figure class="col-md-3 col-sm-3 col-xs-3 d-md-inline-block"
+                                onclick="window.location.href='http://www.premioproyecta.uni.edu.pe'">
+                            <img src="img/logoproyecta.png" class="img-overlay img-circle img-fluid"
+                                >
+                            <a href="http://www.premioproyecta.uni.edu.pe">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </figure>
+                        <figure class="col-md-3 col-sm-3 col-xs-3  d-md-inline-block "
+                                onclick="window.location.href='https://www.facebook.com/Centro.leinn'">
+                            <img src="img/Nuevas alianzas/LEINN.png" class="img-overlay img-circle img-fluid"
+                            >
+                            <a href="https://www.facebook.com/Centro.leinn ">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </figure>
+                        <div class="col-md-3 col-sm-3 col-xs-3 d-md-inline-block "
+                             onclick="window.location.href='http://www.munlima.gob.pe/'">
+                            <img src="img/Nuevas alianzas/Municipalidad_Lima.png" style="" class="img-overlay img-circle img-fluid"
+                                 >
+                            <a href="http://www.munlima.gob.pe/">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <figure class="col-md-3 col-sm-3 col-xs-3  d-md-inline-block "
+                                onclick="window.location.href='https://www.facebook.com/ProyectosSanMarcos'">
+                            <img src="img/Nuevas alianzas/Proyectos_SanMarcos1.png" style="height: 200px;" class="img-overlay img-circle img-fluid"
+                                 >
+                            <a href="https://www.facebook.com/ProyectosSanMarcos">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </figure>
+                        <figure class="col-md-3 col-sm-3 col-xs-3 d-md-inline-block "
+                                onclick="window.location.href='https://www.facebook.com/projectuminstitute'">
+                            <img src="img/Nuevas alianzas/Projectum_Institute_Color.jpeg" class="img-overlay img-circle img-fluid "
+                                >
+                            <a href="https://www.facebook.com/projectuminstitute">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </figure>
+                        <div class="col-md-3 col-sm-3 col-xs-3 d-md-inline-block "
+                             onclick="window.location.href='https://www.facebook.com/SpinOutWorld/'">
+                            <img src="img/Nuevas alianzas/SpinOutUNI.png" class="img-overlay img-circle img-fluid"
+                                >
+                            <a href="https://www.facebook.com/SpinOutWorld/">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <!--<figure class="col-md-3 d-md-inline-block" onclick="window.location.href='https://www.facebook.com/CCLFC.FIEECS/'">
+                            <img src="img/logocentro.jpg" class="img-overlay img-circle img-fluid" alt="Sample image with waves effect.">
+                            <a href="https://www.facebook.com/CCLFC.FIEECS/">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </figure>-->
+                        <div class="col-md-3 col-sm-3 col-xs-3 d-md-inline-block "
+                             onclick="window.location.href='https://www.facebook.com/HultPrizeUNI'">
+                            <img src="img/Nuevas alianzas/HultPrize_Color.png" style="height: 200px;"
+                                 class="img-overlay img-circle img-fluid" >
+                            <a href="https://www.facebook.com/HultPrizeUNI">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3 d-md-inline-block "
+                             onclick="window.location.href='https://www.facebook.com/PROYECTOSUNALM1'">
+                            <img src="img/Nuevas alianzas/Slogan UNALM.png" class="img-overlay img-circle img-fluid"
+                                 >
+                            <a href="https://www.facebook.com/PROYECTOSUNALM1">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3 d-md-inline-block "
+                             onclick="window.location.href='https://www.facebook.com/startupunioficial'">
+                            <img src="img/Nuevas alianzas/logostartupuni.png" style="height: 200px;"
+                                 class="img-overlay img-circle img-fluid" >
+                            <a href="https://www.facebook.com/startupunioficial">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3 d-md-inline-block "
+                             onclick="window.location.href='http://telemetriamovil.pe/'">
+                            <img src="img/Nuevas alianzas/TelemetriaMovil1.png" style="height: 200px;"
+                                 class="img-overlay img-circle img-fluid" >
+                            <a href="http://telemetriamovil.pe/">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3 d-md-inline-block "
+                             onclick="window.location.href='https://www.facebook.com/suyulabperu/'">
+                            <img src="img/Nuevas alianzas/suyulab.jpg" style="height: 200px;" class="img-overlay img-circle img-fluid"
+                                 >
+                            <a href="https://www.facebook.com/suyulabperu/">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3 col-xs-3 d-md-inline-block "
+                             onclick="window.location.href='https://www.facebook.com/WE.Educacion'">
+                            <img src="img/Nuevas alianzas/WeConsulting.png" style="height: 200px;" class="img-overlay img-circle img-fluid"
+                                 >
+                            <a href="https://www.facebook.com/WE.Educacion">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3 d-md-inline-block "
+                             onclick="window.location.href=">
+                            <img src="img/Nuevas alianzas/blank.png" style="height: 200px;"
+                                 class="img-overlay img-circle img-fluid" >
+                            <a href=>
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3 d-md-inline-block "
+                             onclick="window.location.href='https://www.facebook.com/JBenterpriseGroup'">
+                            <img src="img/Nuevas alianzas/JBenterpriseGroup.png" style="height: 200px;" class="img-overlay img-circle img-fluid"
+                                 >
+                            <a href="https://www.facebook.com/JBenterpriseGroup">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3 col-xs-3 d-md-inline-block "
+                             onclick="window.location.href=">
+                            <img src="img/Nuevas alianzas/blank.png" style="height: 200px;" class="img-overlay img-circle img-fluid"
+                                 >
+                            <a href="">
+                                <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel-with-lb" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon d-none d-sm-block"
+                          style="background-color:rgba(128,174,35,0.7)" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-with-lb" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon d-none d-sm-block"
+                          style="background-color:rgba(128,174,35,0.7)" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    
+<footer class="page-footer  font-small black pt-12">
+    <div class="footer-copyright default-color text-center py-3"><strong    > © 2020 Copyright: Todos los derechos reservados.</br>
+        Desarrollado por la dirección de tecnología de información CODE 2020.</strong>
+    </div>
+</footer>
+
+{{!-- SCRIPTS --}}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="/js/menu.js"></script>
+<script src="/js/countdown.js"></script>
+
+<script src="/js/validaregistro.js"></script>
+
+
+
+
+<script>
+    $('.carousel').carousel({
+        interval: 5000,
+    })
+</script>
+
+<script>
+    new WOW().init();
+    var scroll = new SmoothScroll('a[href*="#"]', {
+                offset: 100,
+                speed: 2500
+            }
+            )
+    ;
+
+
+

@@ -1,0 +1,183 @@
+<div class="row  justify-content-md-center">
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        <button class="btn btn-deep-orange" data-toggle="modal" data-target="#modalQuickView4">Otorgar ticket</button>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        <button class="btn btn-deep-orange"  onclick="window.location.href='/listadepagoscodewebpage2019'">Ver lista de pagos</button>
+    </div>
+
+</div>
+<form action="/asignarpagos" method="post">
+    <div class="modal fade" id="modalQuickView4" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row justify-content-md-center">
+                        <br/>
+                        <h2 class="h2-responsive product-name">
+                            <strong style="color: #222222">Asignar ticket a interesado</strong>
+                        </h2>
+                        <br/>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-11 offset-lg-1">
+                                    <div class="md-form form-group">
+                                        <input name="id" type="text" class="form-control"
+                                               id="id" placeholder="ID">
+                                        <label for="id">ID del interesado</label>
+                                    </div>
+                                    <div class="md-form form-group">
+                                        <input name="idtipodetickets" type="text" class="form-control"
+                                               id="apellidotickets" placeholder="Tipo de ticket">
+                                        <label for="apellidotickets">Tipo de ticket</label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-11">
+                                    <div class="md-form form-group">
+                                        <input name="numerodedeposito" type="text" class="form-control"
+                                               id="operacionnumero" placeholder="Número de operación">
+                                        <label for="operacionnumero">Número de operación</label>
+                                    </div>
+                                    <div class="md-form form-group">
+                                        <input name="codigodescuento" type="text" class="form-control"
+                                               id="codigodescuento" placeholder="(opcional)">
+                                        <label for="codigodescuento">Código de descuento</label>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <img src="img/tiposdetickets.PNG">
+                    </div>
+                    <div class="row text-center"
+                         style="margin-left: 3%;margin-right: 8%;padding-bottom: 1.8%;">
+
+                        <button type="button" class="btn btn-deep-orange"
+                                data-dismiss="modal">Close
+                        </button>
+                        <button class="btn btn-default" type="submit">Registrar
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="section">
+    <hr>
+    <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+            <th class="th-sm">Id</th>
+            <th class="th-sm">Nombres
+            </th>
+            <th class="th-sm">Apellidos
+            </th>
+            <th class="th-sm">Email
+            </th>
+            <th class="th-sm">Teléfono
+            </th>
+            <th class="th-sm">Institución
+            </th>
+            <th class="th-sm">Dni
+            </th>
+            <th class="th-sm">Carrera
+            </th>
+            <th class="th-sm">Atencióncode
+            </th>
+            <th class="th-sm">Fecha/hora
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each registrados}}
+
+        <tr>
+            <td>{{id}}</td>
+            <td>{{nombres}}</td>
+            <td>{{apellidos}}</td>
+            <td>{{email}}</td>
+            <td>{{telefono}}</td>
+            <td>{{institucion}}</td>
+            <td>{{dni}}</td>
+            <td>{{carrera}}</td>
+            <td>{{atencioncode}}</td>
+            <td>{{fecha}}</td>
+
+        </tr>
+        {{/each}}
+        </tbody>
+        <tfoot>
+        <tr>
+            <th class="th-sm">Id</th>
+            <th class="th-sm">Nombres
+            </th>
+            <th class="th-sm">Apellidos
+            </th>
+            <th class="th-sm">Email
+            </th>
+            <th class="th-sm">Teléfono
+            </th>
+            <th class="th-sm">Institución
+            </th>
+            <th class="th-sm">Dni
+            </th>
+            <th class="th-sm">Carrera
+            </th>
+            <th class="th-sm">Atencióncode
+            </th>
+            <th class="th-sm">Fecha/hora
+            </th>
+        </tr>
+        </tfoot>
+    </table>
+
+</div>
+
+
+{{!-- SCRIPTS --}}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+    // Material Design example
+    $(document).ready(function () {
+        $('#dtMaterialDesignExample').DataTable();
+        $('#dtMaterialDesignExample_wrapper').find('label').each(function () {
+            $(this).parent().append($(this).children());
+        });
+        $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('input').each(function () {
+            $('input').attr("placeholder", "Search");
+            $('input').removeClass('form-control-sm');
+        });
+        $('#dtMaterialDesignExample_wrapper .dataTables_length').addClass('d-flex flex-row');
+        $('#dtMaterialDesignExample_wrapper  .dataTables_filter').addClass('md-form');
+        $('#dtMaterialDesignExample_wrapper select').removeClass(
+                'custom-select custom-select-sm form-control form-control-sm');
+        $('#dtMaterialDesignExample_wrapper select').addClass('mdb-select');
+        $('#dtMaterialDesignExample_wrapper .mdb-select').materialSelect();
+        $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
+    });
+</script>
